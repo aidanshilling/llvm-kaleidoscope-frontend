@@ -67,3 +67,11 @@ int Lexer::getToken() {
 	LastChar = getchar();
 	return ThisChar;
 }
+
+int Lexer::getNumVal() {
+	return NumVal;
+}
+
+std::string Lexer::getIdentifierStr() {
+	return IdentifierStr;
+}

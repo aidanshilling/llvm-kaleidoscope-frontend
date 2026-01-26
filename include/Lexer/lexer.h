@@ -15,13 +15,15 @@ enum Token {
 };
 
 class Lexer {
-	public:
-		Lexer(const std::string &input);
+public:
+	Lexer(const std::string &input);
 
-		// returns the next token from stdin
-		int getToken();
+	// returns the next token from stdin
+	int getToken();
+	int getNumVal();
+	std::string getIdentifierStr();
 
-	private:
-		std::string IdentifierStr;
-		double NumVal;
+private:
+	std::string IdentifierStr;
+	double NumVal;
 };
