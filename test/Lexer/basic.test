@@ -1,0 +1,5 @@
+# RUN: echo "def foo 1.0" | %lexer-dump | %FileCheck %s
+# CHECK: token: def
+# CHECK: token: ident
+# CHECK: token: num
+# CHECK: token: eof

@@ -3,16 +3,13 @@
 #include <cstdio>
 #include <string>
 
-Lexer::Lexer(const std::string &input) 
-	: NumVal(0.0), IdentifierStr("") 
-{};
+Lexer::Lexer(const std::string &input) : NumVal(0.0), IdentifierStr("") {};
 
 int Lexer::getToken() {
 	static int LastChar = ' ';
-	while (std::isspace(LastChar)) {
-		// TODO: Replace this with something that doesn't just read from stdin
-		getchar();
-	}
+	// TODO: Replace this with something that doesn't just read from stdin
+	while (std::isspace(LastChar))
+		LastChar = getchar();
 
 	// handle identifiers
 	if (std::isalpha(LastChar)) {
@@ -53,7 +50,7 @@ int Lexer::getToken() {
 		// ignore until eol
 		do {
 			LastChar = getchar();
-		} while(LastChar != EOF && LastChar != '\n' && LastChar != '\r');
+		} while (LastChar != EOF && LastChar != '\n' && LastChar != '\r');
 	}
 
 	if (LastChar == EOF) {
@@ -68,10 +65,6 @@ int Lexer::getToken() {
 	return ThisChar;
 }
 
-int Lexer::getNumVal() {
-	return NumVal;
-}
+int Lexer::getNumVal() { return NumVal; }
 
-std::string Lexer::getIdentifierStr() {
-	return IdentifierStr;
-}
+std::string Lexer::getIdentifierStr() { return IdentifierStr; }
