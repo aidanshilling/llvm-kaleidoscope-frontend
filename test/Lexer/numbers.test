@@ -1,0 +1,5 @@
+# RUN: echo "42 3.14 .5" | %lexer-dump | %FileCheck %s
+# CHECK: token: num (-5)
+# CHECK: token: num (-5)
+# CHECK: token: num (-5)
+# CHECK: token: eof (-1)

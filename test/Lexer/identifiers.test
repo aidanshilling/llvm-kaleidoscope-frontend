@@ -1,0 +1,5 @@
+# RUN: echo "foo foo123 x" | %lexer-dump | %FileCheck %s
+# CHECK: token: ident (-4)
+# CHECK: token: ident (-4)
+# CHECK: token: ident (-4)
+# CHECK: token: eof (-1)

@@ -1,0 +1,4 @@
+# RUN: printf "def\t\tfoo" | %lexer-dump | %FileCheck %s
+# CHECK: token: def (-2)
+# CHECK: token: ident (-4)
+# CHECK: token: eof (-1)

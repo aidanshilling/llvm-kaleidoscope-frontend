@@ -13,7 +13,7 @@ int Lexer::getToken() {
 
 	// handle identifiers
 	if (std::isalpha(LastChar)) {
-		IdentifierStr += LastChar;
+		IdentifierStr = LastChar;
 
 		// read input until whitespace or non alpha character
 		while (std::isalnum(LastChar = getchar())) {

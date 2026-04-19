@@ -1,0 +1,7 @@
+# RUN: echo "+ - * ( )" | %lexer-dump | %FileCheck %s
+# CHECK: token: op/char (43)
+# CHECK: token: op/char (45)
+# CHECK: token: op/char (42)
+# CHECK: token: op/char (40)
+# CHECK: token: op/char (41)
+# CHECK: token: eof (-1)

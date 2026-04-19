@@ -1,1 +1,7 @@
-4.257679e-03 Lexer/basic.test
+4.764080e-03 Lexer/basic.test
+4.765034e-03 Lexer/identifiers.test
+5.100012e-03 Lexer/keywords.test
+4.940748e-03 Lexer/mixed.test
+4.536152e-03 Lexer/numbers.test
+4.881620e-03 Lexer/operators.test
+4.652262e-03 Lexer/whitespace.test
